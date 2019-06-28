@@ -8,7 +8,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'TasksController@index');
 });
 
-// Route::resource('tasks', 'TasksController');
+Route::resource('tasks', 'TasksController');
 
 // ログインフォームの表示
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
